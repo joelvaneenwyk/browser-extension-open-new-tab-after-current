@@ -1,42 +1,45 @@
 {
-  "name": "open-new-tab-after-current-tab",
-  "version": "0.4.6",
-  "description": "Opens new tab after the active tab, instead of last position.",
-  "homepage": "https://dev.ligny.org/Open-New-Tab-After-Current-Tab/",
   "author": "Arnaud Ligny",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ArnaudLigny/Open-New-Tab-After-Current-Tab.git"
-  },
   "bugs": {
     "url": "https://github.com/ArnaudLigny/Open-New-Tab-After-Current-Tab/issues"
   },
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "xo",
-    "build": "gulp dist",
-    "release:cws": "cd build && chrome-webstore-upload upload --auto-publish",
-    "release": "npm run build && npm run release:cws"
-  },
+  "description": "Opens new tab after the active tab, instead of last position.",
   "devDependencies": {
+    "@types/gulp": "^4.0.14",
+    "@types/gulp-zip": "^4.0.2",
     "chrome-webstore-upload-cli": "^2.2",
     "del": "^6.1",
     "gulp": "^4.0",
     "gulp-zip": "^5.1",
     "xo": "^0.56"
   },
+  "homepage": "https://dev.ligny.org/Open-New-Tab-After-Current-Tab/",
+  "license": "MIT",
+  "main": "gulpfile.js",
+  "name": "open-new-tab-after-current-tab",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArnaudLigny/Open-New-Tab-After-Current-Tab.git"
+  },
+  "scripts": {
+    "build": "gulp dist",
+    "release": "npm run build && npm run release:cws",
+    "release:cws": "cd build && chrome-webstore-upload upload --auto-publish",
+    "test": "xo"
+  },
+  "type": "commonjs",
+  "version": "0.4.7",
   "xo": {
-    "space": true,
     "envs": [
       "browser",
       "webextensions"
     ],
+    "ignores": [
+      "build/**"
+    ],
     "rules": {
       "unicorn/prefer-module": "off"
     },
-    "ignores": [
-      "build/**"
-    ]
+    "space": true
   }
 }

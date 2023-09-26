@@ -1,11 +1,12 @@
-const {src, dest, series} = require('gulp');
-const del = require('del');
+const gulp = require('gulp');
+const { src, dest, series } = gulp;
+const deleteAsync = require('del');
 const zip = require('gulp-zip');
 
 const extensionName = 'Open-New-Tab-After-Current-Tab';
 
 async function clean() {
-  await del(['build']);
+  await deleteAsync(['build']);
   await Promise.resolve();
 }
 
