@@ -41,5 +41,6 @@
       "unicorn/prefer-module": "off"
     },
     "space": true
-  }
+  },
+  "packageManager": "yarn@3.6.3"
 }

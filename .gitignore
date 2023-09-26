@@ -2,3 +2,8 @@ build
 dist
 certs
 node_modules
+
+.pnp.cjs
+.pnp.loader.mjs
+.yarn/cache/
+.yarn/install-state.gz
