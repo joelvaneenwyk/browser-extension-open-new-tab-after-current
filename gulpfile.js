@@ -1,5 +1,4 @@
-const gulp = require('gulp');
-const { src, dest, series } = gulp;
+const { src, dest, series } = require('gulp');
 const deleteAsync = require('del');
 const zip = require('gulp-zip');
 
